@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The JS Namer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap4-neon-glow.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- JQUERY -->
+    <script src="./js/jquery/jquery.min.js"></script>
+    <script src="./js/jquery/jquery-ui.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-secondary">
+            <ul class="navbar-nav">
+                <a href="#" class="navbar-brand">The JS Namer</a>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/digitalHanzo/JS-File-Serial-Renamer">Github</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/konekokonejo/">Facebook <span class="fab fa-facebook"></span></li> -->
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <br>
+        <div class="container">
+
+            <div id="app">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Lets <span class="vim-caret">go!</span></h1>
+                        </div>
+                        <div class="card-body">
+
+                                <!-- THE INFO -->
+                                <h1 class="display-3">The format</h1>
+                                
+                                <p class="lead">
+                                <table class="table table-hover bg-dark text-left">
+                                    <thead>
+                                        <tr>
+                                            <th>Attrib</th> <th>Example</th> <th>Complete example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span class="text-info">Append</span></td>  
+                                            <td><span class="text-info">.-</span></td> 
+                                            <td>02<span class="text-info">.-</span>Example_Name.pdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="text-danger">Preppend</span></td> 
+                                            <td><span class="text-danger">-John</span></td>
+                                            <td>Example_Name<span class="text-danger">-John</span>03.pdf</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                </p>
+
+                                <hr>
+
+                                <!-- THE FORM -->
+                                <form id="form-file" action="">
+                                    <div class="row">
+                                        <div class="form-group col-3">
+                                            <label for="preppend" class="text-info">Preppend</label>
+                                            <input type="text" class="form-control" name="preppend" id="preppend">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" name="numberLeft" class="custom-control-input" id="numberLeft">
+                                                <label class="custom-control-label" for="numberLeft">Number</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-6">
+                                            <label for="file-name">New Name</label>
+                                            <input class="form-control" type="text" name="name" id="nameFormat">
+                                        </div>
+
+                                        <div class="form-group col-3">
+                                            <label for="append" class="text-danger">Append</label>
+                                            <input type="text" class="form-control" name="append" id="append">
+                                            
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" name="numberRight" class="custom-control-input" id="numberRight">
+                                                <label class="custom-control-label" for="numberRight">Number</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="custom-file">
+                                            <input class="form-control" type="file" name="files" id="files" multiple>
+                                            <label for="files" class="custom-file-label">Choose file</label>
+                                        </div>
+                                    </div>
+                                    <input class="btn btn-success btn-shadow float-right" id="btnSubmit" type="submit" value="Rename!" disabled>
+                                </form>
+                            
+                        </div>
+
+                            <ul id="fileList" class="list-group">
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer class="navbar fixed-bottom bg-dark">
+        <h4>Konejo's SW &copy;</h4>
+    </footer>
+</body>
+
+<!-- JSZIP -->
+<script src="./js/jszip/jszip.min.js"></script>
+
+<script src="./js/app.js"></script>
+</html>
